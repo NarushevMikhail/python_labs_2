@@ -15,6 +15,7 @@ def main():
     print('\n- 1.1 Пусто имя пользователя')
     try: 
         user11 = User('', 'sjdjdoj33', 'OlegCobalt', 'admin')
+        print(f'Пользователь успешно создан')
     except Exception as e:
         print(f'Ошибка при создании пользователя: {e}')
 
