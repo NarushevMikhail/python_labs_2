@@ -4,8 +4,13 @@
 <img width="955" height="462" alt="image" src="https://github.com/user-attachments/assets/812b6eb7-d1ad-4ee0-a3fa-2d18da2b4760" />
 
 
-## 2.Декоратор @Property с валидацией и метод - setter
+## 2.Декоратор @Property с валидацией и метод - setter, а также две функция вне класса для проверки данных.
+-1. Проверка, что имя пользователя не пустое, и что оно является строкой.
+-2. Проверка пароля, что он является строкой, его длина находиться в диапазоне от 1 до 64, и что в пароле есть цифры.
+-3. Проверка логина, что он является строкой, что он состоит не только из чисел, не начинается с @.
+-4. ПРоверка роли, роль может быть только из списка allowed_roles, и что она являеться строкой 
  <img width="1651" height="1437" alt="image" src="https://github.com/user-attachments/assets/50d7f0a0-02e6-4eda-9d60-bd9fb899c642" />
+ <img width="1158" height="504" alt="image" src="https://github.com/user-attachments/assets/85fbf80c-2364-47a5-abab-7ebcdc22b0a2" />
 
 ## 3.Бизнес - методы
 - Обновление профиля
@@ -19,8 +24,6 @@
 ### ```__eq__``` - переопределяет оператор равенства ```==```, задает логику сравнения объектов
 <img width="1408" height="440" alt="image" src="https://github.com/user-attachments/assets/d274ca4d-d2a8-43ba-b16c-323d1e7c15e0" />
 
-## 5.Функции, вне класса
-<img width="1158" height="504" alt="image" src="https://github.com/user-attachments/assets/85fbf80c-2364-47a5-abab-7ebcdc22b0a2" />
 
 ## 6. Вывод в файле ```Demo.py```
 <img width="1130" height="1339" alt="image" src="https://github.com/user-attachments/assets/037026d0-9048-4abb-b2f1-a34d66b5bb41" />
