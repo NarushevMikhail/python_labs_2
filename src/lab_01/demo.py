@@ -119,5 +119,5 @@ def main():
     print(user1.view_profile())
 
 
-if __name__ == '__main__':
+if __name__ == '__main__': #запущен ли файл напрямую или импортирован
     main()

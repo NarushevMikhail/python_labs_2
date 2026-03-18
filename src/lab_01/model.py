@@ -42,10 +42,10 @@ class User:
         else:
             raise TypeError('Неверный формат имени')
         
-    @property
+    @property #получает значение из атрибута
     def password(self):
         return self.__password
-    @password.setter
+    @password.setter #устнавливает значение атрибута
     def password(self, value):
         if isinstance(value, str) and password_check(value):
             self.__password = value
