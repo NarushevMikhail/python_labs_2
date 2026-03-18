@@ -59,24 +59,35 @@
 
 ## Сценарий 1. Созздание объекта.
 <img width="911" height="270" alt="image" src="https://github.com/user-attachments/assets/0d064968-abfb-4498-a25b-bedfa4fa3a9f" />
+
 * Содание объекта
 * Отработка ошибки, если пустое имя пользователя
 
 ## Сценарий 2. Магические метод ```__str__```
 <img width="603" height="337" alt="image" src="https://github.com/user-attachments/assets/fe4ee423-d825-41da-82d6-54c39c7bf94e" />
+
 * вывод для пользователя
+  
 ## Сценарий 3. Магический метод ```__repr__```
 <img width="1367" height="137" alt="image" src="https://github.com/user-attachments/assets/a9b7ca68-6a6f-4a3b-9da2-1d3dc8fce39c" />
+
 * вывод для программиста
+  
 ## Сценарий 4. Магический методд ```__eq__```
 <img width="734" height="396" alt="image" src="https://github.com/user-attachments/assets/83bca655-7367-4d81-b736-39f9edbdb2fa" />
+
 * сравнивание двух объектов по login
+  
 ## Сценарий 5. Login с ошибками
 <img width="688" height="195" alt="image" src="https://github.com/user-attachments/assets/d4de2840-c5df-4e9f-a9e5-b8c912724db2" />
+
 * отработка ошибок на неверно введенный login
+  
 ## Сценарий 6. Проверка password
 <img width="707" height="190" alt="image" src="https://github.com/user-attachments/assets/83a43b38-56fe-44ee-803c-72e23b0d406d" />
+
 * отработка ошибок на неправильный формат password
+  
 ## Сценарий 7. Изменение свойст через setter
 <img width="1709" height="301" alt="image" src="https://github.com/user-attachments/assets/182a571d-debf-4ff0-a219-465c23f4c6c5" />
 
