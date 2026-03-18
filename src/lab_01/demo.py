@@ -55,7 +55,7 @@ def main():
 
     print('\n- 6. Пароль без фицр')
     try: 
-        user6 = User('Michael Jorddanio', 'kkkkk', 'jordan2000', 'user') # nickname, password, login, role
+        user6 = User('Michael Jorddanio', 'kkkkk', 'jordan2000', 'user') 
         print(f'Пользователь успешно создан.')
     except Exception as e:
         print(f'Ошибка: {e}')
@@ -67,6 +67,34 @@ def main():
     except Exception as e:
         print(f'Ошибка: {e}')
 
+    print('\n-- 7. Изменение свойств через setter --')
+    try:
+        user7 = User('Rebeka Wecksler', 'lolsjc23', 'weckslerqwerty12345', 'user')
+        print(f'Роль пользователя "{user7.nickname}": {user7.role}') 
+        print(f'Старая роль user1: {user7.role}') 
+        user7.role = 'moderator'
+        print(f'Новая роль user1: {user7.role}')
+        print(f'Роль пользователя "{user7.nickname}": {user7.role}') 
+    except Exception as e:
+        print(f'Ошибка: {e}')
+
+    print('\n-- 7.1 Проверка ограничений setter --')
+    try:
+        user1.role = 'god'  # недопустимая роль
+    except Exception as e:
+        print(f'Ошибка (ожидаемо): {e}')    
+
+
+    print('\n-- 8. Доступ к атрибуту класса --')
+    print(f"Атрибут класса через класс: {User.total_users}")
+    print(f"Атрибут класса через экземпляр: {user1.total_users}")
+
+    # Если добавили метод:
+    print(f"\nВызов метода класса:")
+    print(User.get_total_users())
+    print(user1.get_total_users())
+    
+    
     print('')
     print('-'*50)
     print('\n-- Отработка бизнес методов.')

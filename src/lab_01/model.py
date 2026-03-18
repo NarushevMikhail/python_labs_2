@@ -75,8 +75,11 @@ class User:
             raise TypeError(f'Такой роли не существует она должна быть одной из {allowed_roles}')
         else:
             self._role = value
-            # print(f'Роль пользователя "{self._nickname}": {self._role}')    
-
+     
+    @classmethod
+    def get_total_users(cls):
+        return f'ВСего создано пользователей: {cls.total_users}'
+    
     #бизнес - методы
     def update_profile(self, bio = None, age = None, city = None):
         if bio is not None:
