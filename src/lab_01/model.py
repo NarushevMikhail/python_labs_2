@@ -10,6 +10,8 @@ def password_check(password: str):
         return False
     
 def login_check(login: str):
+    if not login: 
+        return False
     if login.isdigit() or login[0] == '@': #проверка что логин состоит только из цифр
         return False 
     else: 
