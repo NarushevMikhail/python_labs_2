@@ -136,7 +136,7 @@ try:
     listabc.add(user_a)
     listabc.add(user_b)
     listabc.add(user_c)
-    print(len(listabc))
+    print(f'Длина коллекции: {len(listabc)}')
 except Exception as e:
     print(f'Произошла ошибка: {e}')
 
@@ -258,23 +258,19 @@ except Exception as e:
     print(f'Произошла ошибка: {e}')
 
 print('-'*50)
-print('10. СЦЕНАРИЙ 1: Управление пользователями (добавление, поиск, удаление)')
+print('10. Управление пользователями (добавление, поиск, удаление)')
 try:
     management_list = UserList()
     
-    # Добавляем пользователей
-    print('Добавляем пользователей...')
-    management_list.add(User('Сергей Иванов', 'sergey123', 's.ivanov', 'admin'))
-    management_list.add(User('Ольга Петрова', 'olga456', 'o.petrova', 'user'))
-    management_list.add(User('Дмитрий Сидоров', 'dima789', 'd.sidorov', 'user'))
+    management_list.add(User('Сергей Иванов', 'sergey123', 'sivanov', 'admin'))
+    management_list.add(User('Ольга Петрова', 'olga456', 'opetrova', 'user'))
+    management_list.add(User('Дмитрий Сидоров', 'dima789', 'dsidorov', 'user'))
     print(f'Всего добавлено: {len(management_list)} пользователей')
     
-    # Поиск пользователя
     print('\nПоиск пользователя по nickname "Ольга Петрова":')
     found = management_list.find_by_nickname('Ольга Петрова')
     print(f'Найден: {found[0].nickname}, роль: {found[0].role}')
     
-    # Удаление пользователя
     print('\nУдаляем пользователя "Дмитрий Сидоров"...')
     user_to_remove = management_list.find_by_nickname('Дмитрий Сидоров')[0]
     management_list.remove(user_to_remove)
@@ -284,7 +280,7 @@ except Exception as e:
     print(f'Произошла ошибка: {e}')
 
 print('-'*50)
-print('11. СЦЕНАРИЙ 2: Сортировка и анализ пользователей')
+print('11. Сортировка и анализ пользователей')
 try:
     analytics_list = UserList()
     
@@ -314,7 +310,7 @@ except Exception as e:
     print(f'Произошла ошибка: {e}')
 
     print('-'*50)
-print('12. СЦЕНАРИЙ 3: Индексация и фильтрация')
+print('12. Индексация и фильтрация')
 try:
     index_list = UserList()
     

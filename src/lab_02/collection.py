@@ -56,15 +56,15 @@ class UserList: #класс коллекции
         return [user for user in self._items if user.role == role.lower()]
     
     def sort_by_nickname(self, reverse = False): #сортировка по возврастанию
-        self._items.sort(key=lambda user: user.nickname, reverse = reverse)
+        self._items.sort(key=lambda user: user.nickname, reverse = reverse) #key = lambda - сортировать не по самим объектам, а по их совйству
         return self._items
     
     def sort_by_login(self, reverse=False):
-        self._items.sort(key=lambda user: user.login, reverse=reverse)
+        self._items.sort(key=lambda user: user.login, reverse=reverse) # reverse = False, сортировка по порядку
         return self._items
 
     def sort_by_role(self, reverse = False):
-        self._items.sort(key=lambda user: user.role, reverse = reverse)
+        self._items.sort(key=lambda user: user.role, reverse = reverse) # key - по какому признаку сортировать, lambda - возьми ученика и достань из него
         return self._items
     
 
@@ -100,7 +100,7 @@ class UserList: #класс коллекции
     def __len__(self):
         return len(self._items)
     
-    def __iter__(self):
+    def __iter__(self): # iter позволяет нам последовательно перебирать элементы коллекции
         return iter(self._items)
     
     def __getitem__(self, index):
