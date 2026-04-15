@@ -114,7 +114,10 @@ class User:
         }
     
     def get_access_rights(self): #общий интрефейс поведения через базовый класс
-        return f"Базовый доступ: роль {self._role}"
+        if self.role == 'moderator':
+            return f'Повышенный доступ, роль: {self._role}'
+        else:
+            return f"Базовый доступ: роль {self._role}"
 
     def __str__(self): #вывод для пользователя
         return (f"Пользователь: {self.nickname}\n"

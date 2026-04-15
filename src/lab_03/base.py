@@ -3,7 +3,7 @@ from models import User
 class AdminUser(User):
     
     def __init__(self, nickname, password, login, server_access=True, admin_level=1):
-        # super() для вызова конструктора базового класса 
+        # super() - функция для вызова конструктора базового класса 
         super().__init__(nickname, password, login, role='admin')
         self._server_access = server_access      # доступ к серверу
         self._admin_level = admin_level          # уровень администрирования (1-5)
@@ -32,7 +32,7 @@ class AdminUser(User):
     
     # Новый метод 1: назначить пользователя модератом 
     def assign_moderator(self, user):
-        if not isinstance(user, User):
+        if not isinstance(user, User): #фильтрация по типу
             raise TypeError('Можно назначить только объект User')
         if self._admin_level < 3:
             return f"Ошибка: уровень админа {self._admin_level} слишком низкий для назначения модератора"
@@ -99,7 +99,7 @@ class VIPUser(User):
         """Добавить бонусные баллы"""
         if isinstance(points, int) and points > 0:
             self._bonus_points += points
-            return f"🎁 Начислено {points} бонусов. Всего: {self._bonus_points}"
+            return f"Начислено {points} бонусов. Всего: {self._bonus_points}"
         else:
             raise TypeError('Бонусы должны быть положительным числом')
     
