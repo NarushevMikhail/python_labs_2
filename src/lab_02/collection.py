@@ -1,15 +1,16 @@
-from model import User
+# collection.py - исправленная версия
 
-class UserList: #класс коллекции
-
+class UserList:
     def __init__(self):
         self._items = []
 
     def add(self, item):
-        if not isinstance(item, User):
+        # Убираем проверку типа или оставляем без импорта
+        # Проверка будет позже через hasattr
+        if not hasattr(item, 'nickname') or not hasattr(item, 'login'):
             raise TypeError(f'Добавлять можно только пользователей, передано: {item}')
         
-        if any(anyuser is item for anyuser in self._items):  # ← проверка на дубликат объекта
+        if any(anyuser is item for anyuser in self._items):
             raise ValueError(f'Дубликат объекта: {item}')
         
         elif any(anyuser.nickname == item.nickname for anyuser in self._items): 
@@ -22,7 +23,7 @@ class UserList: #класс коллекции
             self._items.append(item)
 
     def remove(self, item):
-        if not isinstance(item, User):
+        if not hasattr(item, 'nickname'):
             raise TypeError(f'Можно удалить только пользователя, передано: {item}')
         elif item not in self._items:
             raise TypeError(f'Такого объекта не существует')
@@ -41,7 +42,7 @@ class UserList: #класс коллекции
     
     def find_by_nickname(self, nickname):
         if not isinstance(nickname, str):
-            raise TypeError(f'Введённый nicname не является строкой!')
+            raise TypeError(f'Введённый nickname не является строкой!')
         result = [user for user in self._items if user.nickname == nickname]
         return result
     
@@ -55,22 +56,19 @@ class UserList: #класс коллекции
             raise TypeError('Введённая role не является строкой!')
         return [user for user in self._items if user.role == role.lower()]
     
-    def sort_by_nickname(self, reverse = False): #сортировка по возврастанию
-        self._items.sort(key=lambda user: user.nickname, reverse = reverse) #key = lambda - сортировать не по самим объектам, а по их совйству
+    def sort_by_nickname(self, reverse=False):
+        self._items.sort(key=lambda user: user.nickname, reverse=reverse)
         return self._items
     
     def sort_by_login(self, reverse=False):
-        self._items.sort(key=lambda user: user.login, reverse=reverse) # reverse = False, сортировка по порядку
+        self._items.sort(key=lambda user: user.login, reverse=reverse)
         return self._items
 
-    def sort_by_role(self, reverse = False):
-        self._items.sort(key=lambda user: user.role, reverse = reverse) # key - по какому признаку сортировать, lambda - возьми ученика и достань из него
+    def sort_by_role(self, reverse=False):
+        self._items.sort(key=lambda user: user.role, reverse=reverse)
         return self._items
     
-
-    #логические операции над коллекцией: 
-    
-    def get_with_profile(self): #возвращает коллекцию пользователей с заполненым профилем
+    def get_with_profile(self):
         new_collection = UserList()
         for user in self._items:
             if user._bio or user._age > 0 or user._city:
@@ -95,19 +93,16 @@ class UserList: #класс коллекции
     def get_moderators(self):
         return self.get_by_role('moderator') 
     
-    # Магические методы
-    
     def __len__(self):
         return len(self._items)
     
-    def __iter__(self): # iter позволяет нам последовательно перебирать элементы коллекции
+    def __iter__(self):
         return iter(self._items)
     
     def __getitem__(self, index):
         return self._items[index]     
     
     def __str__(self):
+        if len(self._items) == 0:
+            return 'Всего пользователей: 0 \nсписок всех пользователей: []'
         return f'Всего пользователей: {len(self._items)} \nсписок всех пользователей: {self._items}'
-    
-
-    
