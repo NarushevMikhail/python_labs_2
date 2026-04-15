@@ -47,3 +47,32 @@
 #### В итоге у меня получилась иерархия. Базовый класс User содержит главные атрибуты (никнейм, пароль, логин, роль). AdminUser и VIPUser расширяют его своей спецификой, добавляя новые поля и поведение. За счет инкапсуляции я контролирую важные данные, а за счет полиморфизма метод get_access_rights() ведет себя по-разному в зависимости от того, кто его вызывает. Логирование действий админа и история покупок VIP — это уже элементы, приближающие код к реальному приложению.
 
 ## Отработка сценариев в файле ```demo.py```
+### ```Сценарий 1.``` Создание объектов разных типов
+<img width="1918" height="804" alt="image" src="https://github.com/user-attachments/assets/09235695-c10e-47fc-95ca-cb36fa777855" />
+
+### ```Сценарий 2.``` Вывод всей коллекции.
+<img width="2328" height="287" alt="image" src="https://github.com/user-attachments/assets/358a49ed-0776-46e2-86f6-3b5d5a404502" />
+
+### ```Сценарий 3.``` Метод ```VIPUser```
+<img width="1679" height="212" alt="image" src="https://github.com/user-attachments/assets/b6b52183-423c-44b5-991d-04f4887e0fd4" />
+
+### ```Сценарий 4.``` Метод ```AdminUser```
+<img width="1232" height="251" alt="image" src="https://github.com/user-attachments/assets/fbd0fdc2-0705-47e0-af17-5ebe8b6114a8" />
+
+### ```Сценарий 5.``` Переопределенный ```__str__```
+<img width="875" height="1282" alt="image" src="https://github.com/user-attachments/assets/b895f549-7084-46ab-afdf-af5be51f3984" />
+
+### ```Сценарй 6.``` Полиморфное поведение
+<img width="1184" height="681" alt="image" src="https://github.com/user-attachments/assets/8512afe1-10fe-421d-a156-a0d14cc3ebb7" />
+
+### ```Сценарий 7.``` Проверка через ```isinstance()```
+<img width="946" height="876" alt="image" src="https://github.com/user-attachments/assets/19ffcc47-68d8-420d-84db-7142e779d985" />
+
+### ```Сценарий 8.``` Фильтрация коллекции по типу
+<img width="1006" height="447" alt="image" src="https://github.com/user-attachments/assets/adab81e8-6973-4457-9231-735d2363f0d2" />
+
+### ```Сценарий 9.``` Отработка с VIP и бонусами 
+<img width="1360" height="165" alt="image" src="https://github.com/user-attachments/assets/70e42c99-fd18-46af-874d-b6d7a103195c" />
+
+### ```Сценарий 10.``` Администрирование
+<img width="1184" height="262" alt="image" src="https://github.com/user-attachments/assets/c32fcf33-b1e0-4d4e-ba9c-685dfbe385ff" />
