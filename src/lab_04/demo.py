@@ -158,21 +158,3 @@ collection.print_all_via_printable()
 print("\n18. Универсальная функция с Printable:")
 print_all_printable(collection.get_printable())
 
-
-# ========== ИТОГОВАЯ ПРОВЕРКА ==========
-print("\n" + "=" * 50)
-print("ИТОГОВАЯ ПРОВЕРКА")
-print("=" * 50)
-
-print("\n✅ Все объекты реализуют Profile:")
-for obj in [user, admin, guest]:
-    print(f"   {obj.nickname}: Profile = {isinstance(obj, Profile)}")
-
-print("\n✅ Объекты с несколькими интерфейсами:")
-print(f"   {user.nickname}: Profile + Authentication + Printable + Comparable")
-print(f"   {admin.nickname}: Profile + Authentication + Printable + Comparable")
-print(f"   {guest.nickname}: Profile + Printable + Comparable")
-
-print("\n" + "=" * 50)
-print("ДЕМОНСТРАЦИЯ ЗАВЕРШЕНА")
-print("=" * 50)
