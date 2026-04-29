@@ -214,7 +214,7 @@ class Guest(Profile, Printable, Comparable): #второй класс
     
     def compare_to(self, other):
         if isinstance(other, Guest):
-            if self.session_id < other.session_id:
+            if self.session_id < other.session_id: # текущий объект меньше, чем other 
                 return -1
             elif self.session_id == other.session_id:
                 return 0 
