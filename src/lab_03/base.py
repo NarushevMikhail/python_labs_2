@@ -1,4 +1,4 @@
-from models import User
+from lab_01.model import User
 
 class AdminUser(User):
     

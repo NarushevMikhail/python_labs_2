@@ -71,7 +71,7 @@ class User:
     def role(self, value):
         if not isinstance(value, str):
             raise TypeError('Роль должна быть строкой')
-        allowed_roles = ['user', 'admin', 'moderator', 'superadmin']
+        allowed_roles = ['user', 'admin', 'moderator', 'superadmin', 'premium']
         value = value.lower()
         if value not in allowed_roles:
             raise TypeError(f'Такой роли не существует она должна быть одной из {allowed_roles}')
