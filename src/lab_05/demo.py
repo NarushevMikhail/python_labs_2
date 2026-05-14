@@ -17,7 +17,7 @@ class ExtendedUserList(UserList): #класс коллекции с новыми
         self._items.sort(key=key_func, reverse=reverse)
         return self
     
-    def filter_by(self, predicate):
+    def filter_by(self, predicate): #т к цикл нарушиться 
         new_collection = ExtendedUserList()
         for item in self._items:
             if predicate(item):
@@ -25,7 +25,7 @@ class ExtendedUserList(UserList): #класс коллекции с новыми
         return new_collection
     
     def apply(self, func):
-        for i, item in enumerate(self._items):
+        for i, item in enumerate(self._items): #enumerate - создает индексы
             result = func(item)
             # Если функция вернула новое значение, обновляем элемент
             if result is not None:

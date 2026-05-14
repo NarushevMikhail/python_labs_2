@@ -1,7 +1,7 @@
 from lab_03.base import AdminUser, VIPUser
 
 
-#strategies
+#strategies - алгоритм, который можно передать, как параметр 
 def by_nickname(user):
     return user.nickname
 
