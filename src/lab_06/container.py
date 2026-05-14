@@ -22,9 +22,6 @@ class TypedCollection(Generic[T]):
         self._items: List[T] = []
 
     def add(self, item: T) -> None:
-        # Проверка на дубликат объекта (универсальная для любого типа)
-        if any(stored_item is item for stored_item in self._items):
-            raise ValueError(f'Дубликат объекта: {item}')
         self._items.append(item)
 
     def remove(self, item: T) -> None:
