@@ -8,7 +8,7 @@ def demonstrate_typed_collection() -> None:
     print("ДЕМОНСТРАЦИЯ TYPEDCOLLECTION")
     print("=" * 60)
     
-    users = TypedCollection[Displayable]()
+    users = TypedCollection[Displayable]() # указываем объекты, которые можно хранить, которые соответсвуют протоколу () - создаем экземпляр
     
     user1 = User("Alice", "pass123", "alice123", "user")
     user1.update_profile(bio="Python developer", age=25, city="Moscow")
@@ -135,7 +135,7 @@ def demonstrate_protocol_without_inheritance() -> None:
     print("=" * 60)
     
     print("Доказательство: классы НЕ наследуются от Displayable")
-    print(f"  User наследует Displayable? {issubclass(User, Displayable)}")
+    print(f"  User наследует Displayable? {issubclass(User, Displayable)}") #проверяет наследование
     print(f"  AdminUser наследует Displayable? {issubclass(AdminUser, Displayable)}")
     print(f"  VIPUser наследует Displayable? {issubclass(VIPUser, Displayable)}")
     print()
