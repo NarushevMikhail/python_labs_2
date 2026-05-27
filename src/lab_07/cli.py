@@ -70,7 +70,7 @@ class CLI:
         print('1. Поиск по nickanme')
         print('2. Поиск по login')
         try:
-            choice_find = int(input())
+            choice_find = int(input('Способ:'))
         except ValidationError:
             print(f'Введите число!')
             return
@@ -108,7 +108,7 @@ class CLI:
         print('1. Сортировать по никнейму')
         print('2. Сортировка по логину')
         try:
-            choice_sort = int(input())
+            choice_sort = int(input('Способ:'))
         except ValueError: 
             print('Введите число!')
             return 

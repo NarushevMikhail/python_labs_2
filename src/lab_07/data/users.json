@@ -1,18 +1,27 @@
 [
   {
-    "nickname": "anna",
-    "login": "anna2",
-    "password": "anna34",
+    "nickname": "jhon",
+    "login": "jhon228",
+    "password": "jhon12345",
     "role": "user",
     "bio": "",
     "age": 0,
     "city": ""
   },
   {
-    "nickname": "jhon",
-    "login": "jhon228",
-    "password": "jhon12345",
+    "nickname": "ырвшрыш",
+    "login": "lidjofi3",
+    "password": "dofjisdj333",
     "role": "user",
+    "bio": "",
+    "age": 0,
+    "city": ""
+  },
+  {
+    "nickname": "Oleg",
+    "login": "oleg123456",
+    "password": "oleg0987654321",
+    "role": "admin",
     "bio": "",
     "age": 0,
     "city": ""
