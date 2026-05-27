@@ -20,7 +20,7 @@ class Application:
         self._load_data()
     
     def _load_data(self):
-        """Загружает данные из хранилища"""
+        "Загружает данные из хранилища"
         users_data = self.storage.load()
         for data in users_data:
             try:
