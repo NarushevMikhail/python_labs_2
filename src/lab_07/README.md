@@ -61,3 +61,83 @@
 
 * При возникновении ошибки при сохранении или загрузке выбрасывается собственное исключение `StorageError`, которое перехватывается и выводит понятное сообщение
 
+
+## 4. Отработка сценариев
+### 1. Меню
+   
+   <img width="887" height="459" alt="image" src="https://github.com/user-attachments/assets/c0def17a-ed9e-493d-bb1a-fd4b5709328b" />
+
+### 2. Добавление пользователя.
+   
+   <img width="736" height="212" alt="image" src="https://github.com/user-attachments/assets/d400f2af-d935-4d3f-ae81-f464324d92a2" />
+
+### 3. Вывод всей коллекции.
+   <img width="642" height="472" alt="image" src="https://github.com/user-attachments/assets/77888186-a828-4d16-9a6f-d5dc1bd1ca2c" />
+
+### 4. ОТработка ввода некорректных данных.
+* #### Password
+     
+<img width="857" height="221" alt="image" src="https://github.com/user-attachments/assets/a6f0c6f8-bffe-4f93-a3dd-4f0d72b6e534" />
+
+* #### role
+
+<img width="878" height="222" alt="image" src="https://github.com/user-attachments/assets/18562b7c-5781-4675-8ada-123ac9b29c8e" />
+
+ ### 5. Выход из программы.
+
+ <img width="1050" height="489" alt="image" src="https://github.com/user-attachments/assets/d6fd3bf2-f517-4695-8775-2c1b0431787e" />
+   
+### 6. Поиск пользователей по атрибутам.
+
+* #### поиск по `nickname`
+
+<img width="873" height="754" alt="image" src="https://github.com/user-attachments/assets/3e833017-4cbd-4713-8055-6726f9d92829" />
+
+* #### ошибка, пользователя с таким nickname нету.
+
+<img width="891" height="561" alt="image" src="https://github.com/user-attachments/assets/fab7891d-47ee-4b8a-80a2-88cc0b38e44b" />
+
+
+* #### поиск по `login`
+
+<img width="719" height="671" alt="image" src="https://github.com/user-attachments/assets/ecc318bb-3d69-4bae-bfe5-2947a190a616" />
+
+* #### пользователя с таким `login` не существует. 
+
+<img width="845" height="634" alt="image" src="https://github.com/user-attachments/assets/4ab1628b-9b14-4f97-8142-5e74beb2e1ca" />
+
+### 7. Удаление пользователя. 
+
+#### `1. успешное удаление`
+
+<img width="624" height="515" alt="image" src="https://github.com/user-attachments/assets/15ced048-ce12-4a29-98c9-6abcc428ce2b" />
+
+
+#### `2. при удалении произошла ошибка.`
+
+<img width="658" height="535" alt="image" src="https://github.com/user-attachments/assets/de43eabb-ddbc-444d-9b89-4c6129275bb4" />
+
+### 8. Сортировка по атрибутам. 
+
+#### сортировка по `nickname`
+
+<img width="621" height="222" alt="image" src="https://github.com/user-attachments/assets/651779d6-457d-4a35-8390-3bddd6df7a37" />
+
+#### сортировка по `login`
+
+<img width="561" height="214" alt="image" src="https://github.com/user-attachments/assets/b9f90028-63de-49ef-b7cd-6f3c843179c8" />
+
+### 9. Фильтрация по `role`. 
+
+* #### Коллекция до фильтрации.
+
+<img width="557" height="464" alt="image" src="https://github.com/user-attachments/assets/3fcca672-1b78-4626-b24f-e0af8ba90bed" />
+
+* #### User
+
+<img width="728" height="393" alt="image" src="https://github.com/user-attachments/assets/e7154ce9-14cd-41d1-bab4-e2dd52db7ccb" />
+
+
+### 10. Попытка добавить дубликат, с таким же ником.
+   <img width="882" height="200" alt="image" src="https://github.com/user-attachments/assets/fc6473a8-2d05-4d86-b023-0f74e0f83ee3" />
+
