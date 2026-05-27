@@ -1,0 +1,20 @@
+[
+  {
+    "nickname": "anna",
+    "login": "anna2",
+    "password": "anna34",
+    "role": "user",
+    "bio": "",
+    "age": 0,
+    "city": ""
+  },
+  {
+    "nickname": "jhon",
+    "login": "jhon228",
+    "password": "jhon12345",
+    "role": "user",
+    "bio": "",
+    "age": 0,
+    "city": ""
+  }
+]

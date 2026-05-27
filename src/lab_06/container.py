@@ -12,7 +12,7 @@ class Scorable(Protocol):
         ...
 
 
-T = TypeVar('T')
+T = TypeVar('T') #обознает переменную для типа 
 R = TypeVar('R') #нужен, т к map - меняет тип данных 
 D = TypeVar('D', bound = Displayable)
 S = TypeVar('S', bound = Scorable)
